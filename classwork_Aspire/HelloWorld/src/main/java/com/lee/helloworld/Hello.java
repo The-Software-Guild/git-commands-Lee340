@@ -12,7 +12,6 @@ package com.lee.helloworld;
 
 public class Hello {
     public static void main(String[] args) {
-        System.out.println("Hello, Boram!");
+        System.out.println("Hello, Boram Lee!");
     }
-    
 }
