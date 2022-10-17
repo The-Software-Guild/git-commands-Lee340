@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Random;
+package Whiles;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -11,11 +11,11 @@ import java.util.Scanner;
  *
  * @author boram2
  */
-public class GuessMeMore {
-    public static void main (String[] args) {
+public class GuessMeFinally {
+        public static void main (String[] args) {
         Random randomiser = new Random();
         Scanner answer = new Scanner(System.in);
-        int mvAnswer = Math.random()*200
+        int mvAnswer = randomiser.nextInt(200)-99;
         
         System.out.print("I've chosen a number between -100 and 100. Bet you can't guess it!\n" + "Your guess: ");
         int answer1 = answer.nextInt();
