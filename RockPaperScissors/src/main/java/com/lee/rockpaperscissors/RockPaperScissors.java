@@ -13,7 +13,8 @@ import java.util.Scanner;
  * @author boram2
  */
 public class RockPaperScissors {
-    public static void main(String[] args) {
+
+    public void game() {
         Scanner scanner = new Scanner(System.in);
 
         while(true) {

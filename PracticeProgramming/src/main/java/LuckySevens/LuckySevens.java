@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author boram2
  */
 public class LuckySevens {
-    public static void main(String[] args) {
+    public void gamble() {
         Random roll = new Random();
         Scanner userInput = new Scanner(System.in);
 

@@ -14,13 +14,11 @@ import java.util.Scanner;
  */
 public class Factorizer {
     public void factorisation() {
-            
-    Scanner userInput = new Scanner(System.in);
-    ArrayList<Integer> factors = new ArrayList<Integer>();
+        Scanner userInput = new Scanner(System.in);
+        ArrayList<Integer> factors = new ArrayList<Integer>();
         
         System.out.print("What number would you like to factor? ");
         int input = userInput.nextInt();
-         
     
         System.out.println("The factors of " + input + " are:");
         
@@ -35,13 +33,15 @@ public class Factorizer {
         System.out.println(input + " has " + factors.size() + " factors.");
         
         int sum = 0;
-            for(int j = 0; j < factors.size(); j++)
-                sum = sum + j;
-            if (input == sum) {
-                System.out.println(input + " is a perfect number.");
-            } else {
-                System.out.println(input + " is not a perfact number.");
-            }
+
+        for(int j = 0; j < factors.size() - 1; j++) {
+            sum = sum + factors.get(j);
+        }
+        if (input == sum) {
+            System.out.println(input + " is a perfect number.");
+        } else {
+            System.out.println(input + " is not a perfact number.");
+        }
 
         if (factors.size() == 2) {
             System.out.println(input + " is a prime mumber.");
