@@ -2,7 +2,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
  */
-
 package com.lee.rockpaperscissors;
 
 import java.util.Random;
@@ -17,7 +16,7 @@ public class RockPaperScissors {
     public void game() {
         Scanner scanner = new Scanner(System.in);
 
-        while(true) {
+        while (true) {
             System.out.println("How many rounds would you like to play? (#1-10)");
             int rounds = Integer.parseInt(scanner.nextLine());
             int wins = 0;
@@ -27,10 +26,14 @@ public class RockPaperScissors {
             for (int i = 0; i < rounds; i++) {
                 String result = playRockPaperScissors(scanner);
                 switch (result) {
-                    case "tie" -> ties += 1;
-                    case "win" -> wins += 1;
-                    case "loss" -> losses += 1;
-                    default -> {}
+                    case "tie" ->
+                        ties += 1;
+                    case "win" ->
+                        wins += 1;
+                    case "loss" ->
+                        losses += 1;
+                    default -> {
+                    }
                 }
 
             }
@@ -46,16 +49,15 @@ public class RockPaperScissors {
             } else {
                 System.out.println("The computer wins");
             }
-            
+
             System.out.println("Would you like to play again? (yes-no)");
             String answer = scanner.nextLine();
-            
+
             if (!"yes".equals(answer)) {
                 break;
             }
         }
 
-        
     }
 
     static String playRockPaperScissors(Scanner scanner) {
@@ -67,9 +69,12 @@ public class RockPaperScissors {
 
         String computerMove;
         computerMove = switch (randomNumber) {
-            case 0 -> "rock";
-            case 1 -> "paper";
-            default -> "scissors";
+            case 0 ->
+                "rock";
+            case 1 ->
+                "paper";
+            default ->
+                "scissors";
         };
         System.out.println("Computer chose " + computerMove + "!");
 
@@ -87,9 +92,12 @@ public class RockPaperScissors {
 
     static boolean playerWins(String playerMove, String computerMove) {
         return switch (playerMove) {
-            case "rock" -> computerMove.equals("scissors");
-            case "paper" -> computerMove.equals("rock");
-            default -> computerMove.equals("paper");
+            case "rock" ->
+                computerMove.equals("scissors");
+            case "paper" ->
+                computerMove.equals("rock");
+            default ->
+                computerMove.equals("paper");
         };
-    }   
+    }
 }

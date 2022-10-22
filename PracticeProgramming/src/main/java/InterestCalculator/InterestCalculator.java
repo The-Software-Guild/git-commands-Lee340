@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author boram2
  */
 public class InterestCalculator {
-    public static void main(String[] args) {
+    public void interestCal() {
         float rate, year, compound_interest, balance;
         Scanner userInput = new Scanner(System.in);
         
